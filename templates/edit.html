@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{url_for('static',filename='assets/img/insert-image-bg-home.jpg')}}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Admin Panel</h1>
+                            <span class="subheading">Manage your post and change them</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+
+
+<h1>Basic Actions</h1>
+                    
+                        <a href="/dashboard"><button class = "btn btn-primary text-uppercase">Dashboard Home</button></a>
+                        <a href="/logout"><button class = "btn btn-primary text-uppercase">Logout</button></a>
+
+                        <hr>
+
+
+
+<h1>Add/Edit Posts</h1>
+
+<form id="contactForm" action = "/edit/{{post.sno}}" method = "post" data-sb-form-api-token="API_TOKEN">
+                                <div class="form-floating">
+                                    <input class="form-control" id="title" name = 'title' type="text" placeholder="Enter title..." value = "{{post.title}}" data-sb-validations="required" />
+                                    <label for="title">Title</label>
+                                    <div class="invalid-feedback" data-sb-feedback="title:required">A title is required.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="tline" name = 'tline' type="text" placeholder="Enter tagline..." value = "{{post.tagline}}" data-sb-validations="required,tline" />
+                                    <label for="tline">Tagline</label>
+                                    <div class="invalid-feedback" data-sb-feedback="email:required">Tagline is required.</div>
+                                    
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="slug" name = 'slug'type="text" placeholder="Enter slug..." 
+                                    value = "{{post.slug}}" data-sb-validations="required" />
+                                    <label for="slug">Slug</label>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A slug is required.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content" name = 'content' placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required">{{post.content}}</textarea>
+                                    <label for="content">Content</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">A content is required.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="img_file" name = 'img_file' placeholder="Enter the image filename..." value = "{{post.img_file}}" >
+                                    <label for="img_file">Image Filename</label>
+                                    
+                                </div>
+                                <br />
+                                <br>
+                                <div id="success"></div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+                                </div>
+
+
+                                
+                            </form>
+
+
+
+
+
+
+                    
+               
+                </div>
+            </div>
+        </div>
+        {% endblock %}

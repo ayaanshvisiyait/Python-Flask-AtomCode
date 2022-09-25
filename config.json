@@ -1,0 +1,23 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri" : "mysql://root:@localhost/atomcode",
+    "prod_uri" : "mysql://root:@localhost/atomcode",
+    "fb_url" : "https://facebook.com/theatomcode",
+    "tw_url" : "https://twitter.com/theatomcode",
+    "gh_url" : "https://github.com/theatomcode",
+    "blog_name" : "The Atom Code",
+    "tag_line": "Currently working on this website...",
+    "gmail-user" : "newwwwebsite@gmail.com",
+    "gmail-password" : "zzhdxuzozmbvidaz",
+    "about_text" : "Hi! I am Ayaansh Visiyait. I love tech",
+    "no_of_posts" : 3,
+    "login_image" : "atom-code-logo.svg",
+    "admin_user" : "ayaanshvisiyait",
+    "admin_password" : "ayaansh@123",
+    "upload_location" : "C:\\Users\\Ayaansh Visiyait\\PycharmProjects\\flask_project\\static"
+  }
+
+
+}
